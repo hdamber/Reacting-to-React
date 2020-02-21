@@ -22,7 +22,7 @@ class Button extends React.Component {
 
   render() {
     if (this.state.hasLoaded) {
-      return <h1>General Kenobi</h1>;
+      return <h1>Loading....</h1>;
     } else {
       return (
         <React.Fragment>
@@ -35,8 +35,8 @@ class Button extends React.Component {
               this.setState({ text: event.target.value });
             }}/>
 
-          <h3>Loading...</h3>
-          <button onClick={this.handleClick}>Click Me</button>
+          <h3>Please click this button below</h3>
+          <button onClick={this.handleClick}>Click Me!</button>
         </React.Fragment>
       );
     }
