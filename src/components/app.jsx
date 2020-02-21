@@ -46,6 +46,7 @@ class Button extends React.Component {
 export default Button;
 
 
+
 //class-based component with an input//
 // class App extends React.Component {
 //     constructor(props){
@@ -80,6 +81,7 @@ export default Button;
 //     return <h1>Hello there, {this.state.text}! My name is {this.props.name}</h1>;
 //   }
 // }
+
 
 //functional component//
 
