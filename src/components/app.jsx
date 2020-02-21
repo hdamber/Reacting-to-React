@@ -1,14 +1,13 @@
 import React from "react";
 
 //class based-component with an input and a button//
-class Button extends React.Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       text: "General Kenobi",
       hasLoaded: false
-    
     };
 
     this.handleClick = this.handleClick.bind(this);
@@ -16,13 +15,13 @@ class Button extends React.Component {
 
   handleClick(e) {
     this.setState({
-      loaded: true
+      hasLoaded: true
     });
   }
 
   render() {
     if (this.state.hasLoaded) {
-      return <h1>Loading....</h1>;
+      return <h1>Loading...</h1>;
     } else {
       return (
         <React.Fragment>
@@ -33,19 +32,18 @@ class Button extends React.Component {
             value={this.state.text}
             onChange={event => {
               this.setState({ text: event.target.value });
-            }}/>
+            }}
+          />
 
-          <h3>Please click this button below</h3>
-          <button onClick={this.handleClick}>Click Me!</button>
+          <h4>Please click the button below</h4>
+          <button onClick={this.handleClick}>Click Me</button>
         </React.Fragment>
       );
     }
   }
 }
 
-export default Button;
-
-
+export default App;
 
 //class-based component with an input//
 // class App extends React.Component {
@@ -81,7 +79,6 @@ export default Button;
 //     return <h1>Hello there, {this.state.text}! My name is {this.props.name}</h1>;
 //   }
 // }
-
 
 //functional component//
 
