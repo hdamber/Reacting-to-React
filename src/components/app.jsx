@@ -6,7 +6,8 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      text: "General Kenobi",
+      placeholder: 'Write something...',
+      text: 'General Kenobi',
       hasLoaded: false
     };
 
@@ -29,9 +30,9 @@ class App extends React.Component {
             Hello there, {this.state.text}! My name is {this.props.name}
           </h1>
           <input
-            value={this.state.text}
+            value={this.state.placeholder}
             onChange={event => {
-              this.setState({ text: event.target.value });
+              this.setState({ placeholder: event.target.value });
             }}
           />
 
